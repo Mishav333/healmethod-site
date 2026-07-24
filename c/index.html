@@ -32,6 +32,8 @@
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--paper-100);font-family:var(--font-sans);color:var(--charcoal-800);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .bg-parchment{position:fixed;inset:0;z-index:-1;pointer-events:none}
+  .bg-parchment::after{content:"";position:absolute;inset:0;background:url('../assets/background-heal.jpg') center/cover no-repeat;opacity:.5}
   img{max-width:100%}
   a{color:var(--gold-600);text-decoration:none}
   a:focus-visible{outline:2px solid var(--gold-500);outline-offset:3px}
@@ -60,7 +62,7 @@
 
   /* ---------- hero ---------- */
   .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;min-height:640px}
-  .hero-left{padding:34px var(--pad-x) 56px;display:flex;flex-direction:column;background:var(--paper-100)}
+  .hero-left{padding:34px var(--pad-x) 56px;display:flex;flex-direction:column}
   .hero-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:auto}
   .hero-head img{height:50px;width:auto}
   .hero-head .cluster{display:flex;align-items:center;gap:26px}
@@ -70,7 +72,7 @@
   .hero-copy .lede{max-width:470px;margin-bottom:18px}
   .hero-copy .lede.last{margin-bottom:36px}
   .hero-copy .lede b{font-weight:500;color:var(--charcoal-800)}
-  .hero-right{position:relative;background:var(--paper-300);border-left:1px solid rgba(31,41,51,.08);overflow:hidden;display:flex;flex-direction:column;min-height:640px}
+  .hero-right{position:relative;border-left:1px solid rgba(31,41,51,.08);overflow:hidden;display:flex;flex-direction:column;min-height:640px}
   .hero-cta-mobile{display:none}
 
   .ht-halo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:82%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,138,76,.22),rgba(176,138,76,.07) 42%,transparent 68%);pointer-events:none;z-index:0}
@@ -103,7 +105,7 @@
 
   /* ---------- recognition ---------- */
   #recognition .inner{text-align:center}
-  .recog-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:0}
+  .recog-bg{display:none;position:absolute;inset:0;align-items:center;justify-content:center;pointer-events:none;z-index:0}
   .recog-bg svg{width:600px;height:600px;max-width:92%}
   #recognition .eyebrow,#recognition h2,#recognition .flow{position:relative;z-index:1}
   #recognition h2{font-size:clamp(27px,3.3vw,46px);max-width:880px;margin:30px auto 40px}
@@ -121,7 +123,7 @@
   .contrast .word{display:block;font:400 30px/1 var(--font-serif);color:var(--charcoal-300);margin:0 0 10px}
   .contrast .item.heal .word{font-size:34px;font-style:italic;color:var(--gold-600)}
   .contrast .item.heal .micro{color:var(--gold-700)}
-  .corner{position:absolute;width:380px;height:380px;opacity:.13;pointer-events:none;z-index:0}
+  .corner{display:none;position:absolute;width:380px;height:380px;opacity:.13;pointer-events:none;z-index:0}
   .corner.br{right:-100px;bottom:-100px}
   .corner.tl{left:-120px;top:-120px;opacity:.12}
 
@@ -251,7 +253,7 @@
     .hero-copy .lede{--lede-size:15px;margin-bottom:16px}
     .hero-copy .lede.last{margin-bottom:26px}
     .hero-cta-desktop{display:none}
-    .hero-right{margin:0 26px;min-height:0;background:var(--paper-200);border:1px solid var(--line-soft);border-radius:14px;flex-direction:column}
+    .hero-right{margin:0 26px;min-height:0;background:rgba(253,249,242,.82);border:1px solid var(--line-soft);border-radius:14px;flex-direction:column}
     .lc-rail{margin:0 auto;max-width:280px;padding:2px 0 28px}
     .lc-rail::before{display:none}
     .lc-node{padding:12px 0;border-top:1px solid var(--line-soft)}
@@ -324,7 +326,7 @@
   .heroC .photo{position:relative;overflow:hidden}
   .heroC .photo .port{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
   .heroC .logo-overlay{display:none}
-  .heroC .col{padding:52px 56px;display:flex;flex-direction:column;background:var(--paper-100)}
+  .heroC .col{padding:52px 56px;display:flex;flex-direction:column}
   .heroC .head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:auto}
   .heroC .head img{height:48px;width:auto}
   .heroC .body{padding:48px 0}
@@ -352,6 +354,8 @@
 </style>
 </head>
 <body>
+
+<div class="bg-parchment" aria-hidden="true"></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="sacred" viewBox="0 0 200 200">
