@@ -92,7 +92,7 @@
 
   /* portal motif: Veo video, cream ground multiplied into the parchment,
      feathered to a soft circle so its edges never show as a box */
-  .motif-stage .motif video{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.22);mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(circle,#000 60%,transparent 80%);mask-image:radial-gradient(circle,#000 60%,transparent 80%)}
+  .motif-stage .motif video{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(circle,#000 62%,transparent 84%);mask-image:radial-gradient(circle,#000 62%,transparent 84%)}
 
   /* ---------- recognition ---------- */
   #recognition .inner{text-align:center}
@@ -411,7 +411,7 @@
       <div class="motif-stage">
         <div class="ht-halo"></div>
         <div class="motif">
-          <video id="portal" src="assets/hero-portal.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+          <video id="portal" src="assets/hero-mark.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
         </div>
       </div>
     </div>
@@ -684,7 +684,7 @@
     if (!v) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
       v.removeAttribute('autoplay');
-      v.addEventListener('loadeddata', function(){ v.currentTime = 1; v.pause(); });
+      v.addEventListener('loadeddata', function(){ v.currentTime = 7.5; v.pause(); });
       v.pause();
       return;
     }
