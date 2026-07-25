@@ -113,6 +113,14 @@
   #journey .jrow.last .ph{color:var(--gold-300)}
   #journey .jrow.last h3{color:var(--gold-200)}
 
+  /* in the app */
+  #app h2{font-size:clamp(26px,2.9vw,42px);margin:0 0 22px}
+  #app .lede{--lede-size:16px;max-width:460px}
+  #app .duo{display:flex;justify-content:center;align-items:flex-start}
+  #app .duo img{display:block;height:auto;filter:drop-shadow(0 30px 46px rgba(20,27,33,.26)) drop-shadow(0 6px 14px rgba(20,27,33,.14))}
+  #app .duo img.back{width:46%;max-width:250px}
+  #app .duo img.front{width:50%;max-width:272px;margin:clamp(48px,5vw,76px) 0 0 -7%}
+
   /* receive */
   #receive .rhead{max-width:640px;margin:0 auto clamp(26px,3.9vw,56px)}
   #receive .rhead{margin-left:0}
@@ -213,6 +221,8 @@
     .hero-ctas .btn{width:100%}
     .hero-ctas .micro{text-align:center}
     .grid2{grid-template-columns:1fr;gap:24px}
+    #app .duo{max-width:400px;margin:10px auto 0}
+    #app .duo img.front{margin-top:36px}
     #recognition .txtcol{border-left:none;padding-left:0}
     #difference .ledger{padding:6px 22px}
     .method-grid{grid-template-columns:1fr;gap:26px}
@@ -338,6 +348,23 @@
       <div class="jrow"><span class="ph">Week 2</span><div><h3>Calibrate the technique</h3><p>A private call to correct uncertainty early and strengthen your confidence.</p></div></div>
       <div class="jrow"><span class="ph">Weeks 2–8</span><div><h3>Put it into practice</h3><p>The app guides the sequence; community and a direct support line are there when you need help.</p></div></div>
       <div class="jrow last"><span class="ph">Day 60</span><div><h3>The structure steps back</h3><p>Your Month-2 integration session brings it together. The program ends; the skill stays.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5b · In the app -->
+<section id="app" class="band">
+  <div class="inner">
+    <div class="grid2">
+      <div>
+        <p class="eyebrow" style="margin-bottom:24px">In the app</p>
+        <h2 class="serif">The structure is handled for you.<br><span class="turn">Test, locate, listen, release, retest.</span></h2>
+        <p class="lede">The app walks each session through the same five movements and remembers where you left off. The sequence lives in the app; the method lives in your hands.</p>
+      </div>
+      <div class="duo">
+        <img class="back" src="../assets/app-test.webp" alt="Heal app Test step asking what you are ready to test" loading="lazy" decoding="async" width="720" height="1503">
+        <img class="front" src="../assets/app-word.webp" alt="Heal app Find the block step with a list of words to test" loading="lazy" decoding="async" width="720" height="1503">
+      </div>
     </div>
   </div>
 </section>
