@@ -76,10 +76,10 @@
 
   .ht-halo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:82%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(176,133,47,.18),rgba(176,133,47,.06) 42%,transparent 68%);pointer-events:none;z-index:0}
   .motif-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:270px}
-  .motif-stage .motif{position:relative;width:min(660px,100%);aspect-ratio:16/9;z-index:1}
+  .motif-stage .motif{position:absolute;inset:0;z-index:1}
 
   @keyframes ht-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-  .lc-rail{position:relative;padding-left:26px;margin:54px 56px 0;max-width:360px;animation:ht-rise .9s ease-out both}
+  .lc-rail{position:relative;z-index:2;padding-left:26px;margin:54px 56px 0;max-width:360px;animation:ht-rise .9s ease-out both}
   .lc-rail::before{content:"";position:absolute;left:5px;top:8px;bottom:20px;width:1px;background:linear-gradient(var(--charcoal-300),var(--gold-500))}
   .lc-node{position:relative;padding:16px 0}
   .lc-node::before{content:"";position:absolute;left:-24px;top:23px;width:9px;height:9px;border-radius:50%;background:var(--paper-100);border:1px solid var(--charcoal-300)}
@@ -92,7 +92,8 @@
 
   /* portal motif: Veo video, cream ground multiplied into the parchment,
      feathered to a soft circle so its edges never show as a box */
-  .motif-stage .motif video{display:block;width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse at center,#000 48%,transparent 76%);mask-image:radial-gradient(ellipse at center,#000 48%,transparent 76%)}
+  .motif-stage .motif video{display:block;width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
+  .motif-stage .motif::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(rgba(247,241,231,.75),rgba(247,241,231,.75)),url('assets/background-heal.jpg') center/cover;background-attachment:fixed;-webkit-mask-image:radial-gradient(ellipse at center,transparent 40%,#000 76%);mask-image:radial-gradient(ellipse at center,transparent 40%,#000 76%)}
 
   /* ---------- recognition ---------- */
   #recognition .inner{text-align:center}
@@ -284,8 +285,7 @@
     .lc-node:first-child{border-top:none}
     .lc-node::before{display:none}
     .lc-ph{font-size:21px}
-    .motif-stage{order:-1;min-height:180px;margin-bottom:2px}
-    .motif-stage .motif{width:min(420px,94vw)}
+    .motif-stage{order:-1;min-height:300px;margin-bottom:2px}
     .hero-right{display:flex}
     .hero-cta-mobile{display:block;padding:26px 26px 56px}
     .hero-cta-mobile .btn{width:100%}
