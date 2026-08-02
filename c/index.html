@@ -175,6 +175,16 @@
   .founder-text p.body{font:300 16px/1.8 var(--font-sans);color:var(--charcoal-600);max-width:460px;margin:0 0 18px}
   .fquote{font-family:var(--font-serif);font-size:clamp(20px,1.7vw,23px);font-style:italic;color:var(--charcoal-800);max-width:440px;margin:10px 0;line-height:1.4}
   .fname{font:600 11px/1 var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal-400);margin:0}
+  /* who you learn it from: second beat inside the founder section */
+  .whois{border-top:1px solid rgba(31,41,51,.1)}
+  /* left-aligned to the founder text column above, per this variant's asymmetric spine */
+  .whois-inner{max-width:760px;margin:0;padding:clamp(46px,5.4vw,78px) clamp(26px,4.4vw,64px) clamp(50px,6vw,86px)}
+  .whois-inner h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(24px,2.3vw,32px);line-height:1.17;color:var(--charcoal-900);margin:18px 0 26px}
+  .whois-inner h3 .turn{display:block;color:var(--gold-600);font-style:italic}
+  .whois-inner p:not(.eyebrow){font:300 16px/1.8 var(--font-sans);color:var(--charcoal-600);margin:0 0 18px}
+  .whois-inner p:last-of-type{margin-bottom:0}
+  .whois-stage{position:relative;aspect-ratio:16/9;margin:0 0 30px;border-radius:10px;overflow:hidden;background:var(--charcoal-800);box-shadow:0 26px 60px -36px rgba(31,41,51,.55)}
+  .whois-stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .founder-photo{position:relative;overflow:hidden}
   .founder-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
 
@@ -291,7 +301,7 @@
         <p class="ownline">Your body already knows. <b>Heal teaches you how to ask.</b></p>
         <div class="hero-ctas">
           <a class="btn primary" href="../apply.html">Apply for Heal</a>
-          <span class="micro">A 60-day initiation · Melbourne · by application</span>
+          <span class="micro">Melbourne · by application · begins with a free 30-minute call</span>
         </div>
       </div>
     </div>
@@ -400,10 +410,10 @@
       <h2 class="serif">You learn it in person, use it with support,<br><span class="turn">and leave able to use it without us.</span></h2>
     </div>
     <div class="jrows">
-      <div class="jrow"><span class="ph">Day One</span><div><h3>Learn the method</h3><p>A private 1.5–2 hr initiation with Misha in Melbourne. Shown how to self-test and corrected in real time.</p></div></div>
+      <div class="jrow"><span class="ph">Day One</span><div><h3>Learn the method</h3><p>A private 1.5 to 2 hr initiation with Misha in Melbourne. Shown how to self-test and corrected in real time.</p></div></div>
       <div class="jrow"><span class="ph">Week 1</span><div><h3>Begin your framework</h3><p>Your guided path opens around the pattern you have chosen to work with.</p></div></div>
       <div class="jrow"><span class="ph">Week 2</span><div><h3>Calibrate the technique</h3><p>A private call to correct uncertainty early and strengthen your confidence.</p></div></div>
-      <div class="jrow"><span class="ph">Weeks 2–8</span><div><h3>Put it into practice</h3><p>The app guides the sequence; community and a direct support line are there when you need help.</p></div></div>
+      <div class="jrow"><span class="ph">Weeks 2 to 8</span><div><h3>Put it into practice</h3><p>The app guides the sequence; community and a direct support line are there when you need help.</p></div></div>
       <div class="jrow last"><span class="ph">Day 60</span><div><h3>The structure steps back</h3><p>Your Month-2 integration session brings it together. The program ends; the skill stays.</p></div></div>
     </div>
   </div>
@@ -479,6 +489,22 @@
     </div>
     <div class="founder-photo"><img src="../assets/misha.jpg" alt="Misha Vaxman, founder of Heal"></div>
   </div>
+  <div class="whois">
+    <div class="whois-inner">
+      <p class="eyebrow">Who you learn it from</p>
+      <!-- FOUNDER FILM: when the clip exists, save it as ../assets/founder.mp4 with a
+           poster frame at ../assets/founder-poster.jpg and uncomment the block below.
+           Nothing else needs to change; the copy underneath becomes its caption.
+      <div class="whois-stage">
+        <video src="../assets/founder.mp4" poster="../assets/founder-poster.jpg" controls playsinline preload="none"></video>
+      </div>
+      -->
+      <h3>I did not come to this as a practitioner.<span class="turn">I came to it stuck.</span></h3>
+      <p>More than fifteen years of personal development. I studied the work of Tony Robbins, Wayne Dyer, Joe Dispenza and David Bayer, sat in retreats, meditated, fasted. I understood a great deal. There were still parts of my life where understanding changed nothing.</p>
+      <p>At one point I was running a business with more than twenty staff, with two children under two and my wife at home. From the outside I was building something successful. Inside, I felt like I could not get anything right.</p>
+      <p>What changed was learning to stop guessing and start listening to my body's response. Then I built a structure around it, so it could be repeated rather than stumbled into. That structure became Heal, and it is what I teach on Day One.</p>
+    </div>
+  </div>
 </section>
 
 <!-- 9 · Investment -->
@@ -496,7 +522,7 @@
         <div class="rule" style="margin-bottom:24px"><i></i><b></b><i></i></div>
         <p class="price-split">Or <b>2 × $945</b>, second payment due on Day 30.</p>
         <a class="btn primary" href="../apply.html">Apply for Heal</a>
-        <span class="micro">Apply, have a short Introduction Call, then choose your commencement date. Nothing is purchased online.</span>
+        <span class="micro">Apply, have a free 30-minute Introduction Call with Misha, then choose your commencement date. Nothing is purchased online.</span>
       </div>
     </div>
   </div>
@@ -509,6 +535,7 @@
       <p class="eyebrow">Before you apply</p>
       <h2 class="serif">A few honest questions.</h2>
       <div class="faq">
+        <details><summary>I am not sure this is for me. What is the first step?<span class="fq-i"></span></summary><p>Finding that out is the first step. Send a short application, and if it looks like a fit you will have a free 30-minute Introduction Call with Misha, by phone or video. It is a conversation about what you are working with and how the method actually works, and you can ask anything. Applying commits you to nothing, and nothing is purchased online.</p></details>
         <details><summary>Can't I just be tested by a kinesiologist?<span class="fq-i"></span></summary><p>Yes. A kinesiologist can test on your behalf. The difference is that Heal is designed to teach you how to self-test, so the method does not remain entirely in the practitioner's hands.</p></details>
         <details><summary>Is the app just another thing I will stop using?<span class="fq-i"></span></summary><p>The app is not the product. It guides the 60-day sequence and keeps the process clear between your calls and sessions. The skill itself is the product.</p></details>
         <details><summary>Why would this help when other things haven't?<span class="fq-i"></span></summary><p>Heal does not promise a breakthrough or guarantee an outcome. Rather than analysing the story again, you learn to test what may be sitting underneath it.</p></details>
@@ -523,7 +550,7 @@
   <div class="veil" aria-hidden="true"></div>
   <div class="inner">
     <h2 class="serif">The skill is yours to keep.<br><span class="turn">Learn it once.</span></h2>
-    <p class="sub">Applications for the Heal founding cohort are open. It begins with a conversation.</p>
+    <p class="sub">Applications for the Heal founding cohort are open. It begins with a free 30-minute conversation.</p>
     <a class="btn gold" style="padding:19px 46px" href="../apply.html">Apply for Heal</a>
   </div>
 </section>
