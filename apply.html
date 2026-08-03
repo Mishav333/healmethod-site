@@ -22,20 +22,22 @@
   .bg-parchment{position:fixed;inset:0;z-index:-1;pointer-events:none}
   .bg-parchment::after{content:"";position:absolute;inset:0;background:url('assets/background-heal.jpg') center/cover no-repeat;opacity:.62}
   a{color:var(--gold-600);text-decoration:none}
-  a:focus-visible{outline:2px solid var(--gold-500);outline-offset:3px}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold-500);outline-offset:3px}
 
-  .wrap{max-width:720px;margin:0 auto;padding:clamp(40px,6vw,72px) 26px 80px;text-align:center}
-  .logo{height:52px;width:auto;margin-bottom:clamp(36px,5vw,56px)}
-  .eyebrow{font:600 12px/1.5 var(--font-sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-600);margin:0 0 26px}
-  h1{font-family:var(--font-serif);font-weight:400;font-size:clamp(36px,5.2vw,58px);letter-spacing:.01em;line-height:1.08;color:var(--charcoal-900);margin:0 0 22px}
+  .wrap{max-width:720px;margin:0 auto;padding:clamp(32px,5vw,64px) 26px 60px;text-align:center}
+  .logo{height:48px;width:auto;margin-bottom:clamp(28px,4vw,44px)}
+  .eyebrow{font:600 12px/1.5 var(--font-sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-600);margin:0 0 22px}
+  h1{font-family:var(--font-serif);font-weight:400;font-size:clamp(32px,4.8vw,54px);letter-spacing:.01em;line-height:1.08;color:var(--charcoal-900);margin:0 0 20px}
   h1 em{font-style:italic;color:var(--gold-600)}
-  .lede{font:300 clamp(15px,1.4vw,17px)/1.8 var(--font-sans);color:var(--charcoal-600);max-width:540px;margin:0 auto 20px}
-  .rule{display:flex;align-items:center;justify-content:center;height:1px;max-width:180px;margin:0 auto 44px}
+  .lede{font:300 clamp(15px,1.4vw,17px)/1.8 var(--font-sans);color:var(--charcoal-600);max-width:540px;margin:0 auto 18px}
+  .rule{display:flex;align-items:center;justify-content:center;height:1px;max-width:180px;margin:0 auto 38px}
   .rule i{flex:1;height:1px;background:rgba(31,41,51,.16)}
   .rule b{width:6px;height:6px;border-radius:50%;background:var(--gold-500);margin:0 14px;flex:none}
 
-  .card{background:var(--paper-0);border:1px solid rgba(31,41,51,.12);border-top:2px solid var(--gold-500);border-radius:12px;padding:clamp(34px,4.5vw,52px) clamp(26px,5vw,56px);box-shadow:0 24px 60px -34px rgba(31,41,51,.4);text-align:left}
-  .steps{display:flex;flex-direction:column;gap:0;margin:0 0 36px}
+  .card{background:var(--paper-0);border:1px solid rgba(31,41,51,.12);border-top:2px solid var(--gold-500);border-radius:12px;padding:clamp(30px,4vw,48px) clamp(24px,4.5vw,52px);box-shadow:0 24px 60px -34px rgba(31,41,51,.4);text-align:left}
+
+  /* intro steps */
+  .steps{display:flex;flex-direction:column;gap:0;margin:0 0 32px}
   .step{display:flex;gap:20px;align-items:flex-start;padding:20px 0}
   .step + .step{border-top:1px solid rgba(31,41,51,.08)}
   .step .n{flex:none;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid rgba(31,41,51,.2);color:var(--charcoal-500);font:600 11px/1 var(--font-sans);letter-spacing:.06em}
@@ -43,19 +45,71 @@
   .step h3{font:400 21px/1.25 var(--font-serif);color:var(--charcoal-900);margin:5px 0 6px}
   .step h3 .dur{display:inline-block;vertical-align:middle;margin-left:10px;font:600 10px/1 var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-600);border:1px solid rgba(176,133,47,.4);border-radius:3px;padding:5px 8px}
   .step p{font:300 13.5px/1.65 var(--font-sans);color:var(--charcoal-500);margin:0;max-width:440px}
-  .cta-row{text-align:center;padding-top:6px}
-  .btn{display:inline-flex;align-items:center;justify-content:center;font:600 12.5px/1 var(--font-sans);letter-spacing:.16em;text-transform:uppercase;padding:19px 44px;border-radius:4px;background:var(--charcoal-800);color:var(--paper-100);transition:background .2s;border:none;cursor:pointer}
-  .btn:hover{background:var(--charcoal-900);color:var(--paper-100)}
-  .micro{font:400 12px/1.7 var(--font-sans);color:var(--charcoal-400);margin:18px auto 0;max-width:420px}
 
-  .quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(18px,1.7vw,22px);color:var(--charcoal-500);margin:clamp(36px,5vw,52px) auto 6px;max-width:460px;line-height:1.5}
-  .back{display:inline-block;font:600 11px/1 var(--font-sans);letter-spacing:.16em;text-transform:uppercase;margin-top:40px}
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;font:600 12.5px/1 var(--font-sans);letter-spacing:.16em;text-transform:uppercase;padding:19px 44px;border-radius:4px;background:var(--charcoal-800);color:var(--paper-100);transition:background .2s,opacity .2s;border:none;cursor:pointer;font-family:var(--font-sans)}
+  .btn:hover{background:var(--charcoal-900)}
+  .btn[disabled]{opacity:.45;cursor:not-allowed}
+  .btn.ghost{background:transparent;color:var(--charcoal-500);padding:19px 4px;letter-spacing:.14em}
+  .btn.ghost:hover{background:transparent;color:var(--charcoal-900)}
+  .cta-row{text-align:center;padding-top:4px}
+  .micro{font:400 12px/1.7 var(--font-sans);color:var(--charcoal-400);margin:16px auto 0;max-width:430px}
+
+  /* form screens */
+  .screen{display:none}
+  .screen.on{display:block;animation:fade .32s ease-out both}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .qmeta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 26px}
+  .qcount{font:600 10px/1 var(--font-sans);letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal-400)}
+  .bar{flex:1;height:2px;background:rgba(31,41,51,.1);border-radius:2px;overflow:hidden;max-width:220px}
+  .bar i{display:block;height:100%;width:0;background:var(--gold-500);transition:width .35s ease}
+
+  .qtitle{font-family:var(--font-serif);font-weight:400;font-size:clamp(23px,2.6vw,30px);line-height:1.22;color:var(--charcoal-900);margin:0 0 10px}
+  .qhelp{font:300 13.5px/1.7 var(--font-sans);color:var(--charcoal-500);margin:0 0 22px;max-width:480px}
+  .qnote{font:300 13.5px/1.75 var(--font-sans);color:var(--charcoal-600);background:var(--paper-50);border-left:2px solid var(--gold-400);border-radius:0 6px 6px 0;padding:14px 16px;margin:0 0 22px}
+
+  input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:300 16px/1.6 var(--font-sans);color:var(--charcoal-900);background:var(--paper-0);border:1px solid rgba(31,41,51,.22);border-radius:6px;padding:15px 16px;transition:border-color .2s}
+  input:focus,textarea:focus{border-color:var(--gold-500)}
+  textarea{min-height:130px;resize:vertical}
+
+  .opts{display:flex;flex-direction:column;gap:10px;margin:0 0 6px}
+  .opt{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(31,41,51,.18);border-radius:8px;padding:16px 18px;cursor:pointer;transition:border-color .18s,background .18s}
+  .opt:hover{border-color:var(--gold-400);background:var(--paper-50)}
+  .opt.sel{border-color:var(--gold-500);background:rgba(176,133,47,.07)}
+  .opt input{position:absolute;opacity:0;width:0;height:0}
+  .opt .mark{flex:none;width:19px;height:19px;border:1px solid rgba(31,41,51,.35);border-radius:50%;margin-top:2px;position:relative;transition:border-color .18s}
+  .opt .mark.sq{border-radius:4px}
+  .opt.sel .mark{border-color:var(--gold-600)}
+  .opt.sel .mark::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--gold-600)}
+  .opt.sel .mark.sq::after{border-radius:1px}
+  .opt span.tx{font:300 15px/1.55 var(--font-sans);color:var(--charcoal-800)}
+
+  .err{font:500 13px/1.5 var(--font-sans);color:#8A3D3D;margin:12px 0 0;display:none}
+  .err.on{display:block}
+
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(31,41,51,.08)}
+  .nav .btn{padding:17px 38px}
+
+  /* terminal screens */
+  .exit-h{font-family:var(--font-serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2;color:var(--charcoal-900);margin:0 0 18px}
+  .exit-p{font:300 15px/1.85 var(--font-sans);color:var(--charcoal-600);margin:0 0 16px}
+  .exit-p b{font-weight:600;color:var(--charcoal-900)}
+  .lifeline{display:block;background:var(--paper-50);border-left:2px solid var(--gold-500);border-radius:0 6px 6px 0;padding:18px 20px;margin:22px 0 6px;font:300 15px/1.8 var(--font-sans);color:var(--charcoal-800)}
+  .lifeline b{display:block;font:600 11px/1 var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-700);margin-bottom:10px}
+
+  .quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(18px,1.7vw,22px);color:var(--charcoal-500);margin:clamp(32px,4vw,48px) auto 6px;max-width:460px;line-height:1.5}
+  .back{display:inline-block;font:600 11px/1 var(--font-sans);letter-spacing:.16em;text-transform:uppercase;margin-top:34px}
+  .disclaimer{font:400 11.5px/1.7 var(--font-sans);color:var(--charcoal-400);max-width:560px;margin:34px auto 0}
+
+  .spin{display:inline-block;width:13px;height:13px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;margin-right:10px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+
   @media (max-width:640px){
-    .card{text-align:left}
-    .cta-row .btn{width:100%}
-  }
-  @media (max-width:460px){
-    /* keep the duration badge off the headline so it never wraps mid-phrase */
+    .card{padding:26px 22px}
+    .cta-row .btn,.nav .btn.primary{width:100%}
+    .nav{flex-direction:column-reverse;align-items:stretch}
+    .nav .btn.ghost{width:100%}
     .step h3 .dur{display:block;margin:10px 0 0;width:fit-content}
   }
 </style>
@@ -65,22 +119,455 @@
 <div class="wrap">
   <a href="index.html"><img class="logo" src="assets/logo-primary.png" alt="Heal"></a>
   <p class="eyebrow">Application</p>
-  <h1>It begins with <em>a conversation.</em></h1>
-  <p class="lede">Tell us a little about you and why you want to explore Heal. Every application is read personally, nothing is purchased online, and applying does not commit you to anything.</p>
+  <h1 id="pagetitle">It begins with <em>a conversation.</em></h1>
+  <p class="lede" id="pagelede">Tell us a little about you and why you want to explore Heal. Every application is read personally, nothing is purchased online, and applying does not commit you to anything.</p>
   <div class="rule"><i></i><b></b><i></i></div>
+
   <div class="card">
-    <div class="steps">
-      <div class="step"><span class="n gold">01</span><div><h3>Apply</h3><p>Send a short note: who you are, and why you want to explore Heal. A few honest lines are enough.</p></div></div>
-      <div class="step"><span class="n">02</span><div><h3>Introduction Call <span class="dur">30 minutes, free</span></h3><p>A conversation with Misha by phone or video: what you are working with, how the method actually works, and whether Heal fits where you are. Ask anything.</p></div></div>
-      <div class="step"><span class="n">03</span><div><h3>Choose your commencement date</h3><p>If it is the right fit, you choose when your 60 days begin. Nothing is purchased online.</p></div></div>
-    </div>
-    <div class="cta-row">
-      <a class="btn" href="mailto:misha@healmethod.com.au?subject=Heal%20application&body=Name%3A%0APhone%3A%0A%0AWhy%20I%20want%20to%20explore%20Heal%3A%0A">Email your application</a>
-      <p class="micro">Opens in your email app with a few starting lines. Prefer to write it your own way? Anything honest is enough. If you are still deciding whether Heal is for you, apply anyway and use the call to find out.</p>
-    </div>
+
+    <!-- ============ S0 · intro ============ -->
+    <section class="screen on" id="s-intro">
+      <div class="steps">
+        <div class="step"><span class="n gold">01</span><div><h3>Apply</h3><p>Eleven short questions, about five minutes. It leads to a free call, not a commitment.</p></div></div>
+        <div class="step"><span class="n">02</span><div><h3>Introduction Call <span class="dur">30 minutes, free</span></h3><p>A conversation with Misha by phone or video: what you are working with, how the method actually works, and whether Heal fits where you are. Ask anything.</p></div></div>
+        <div class="step"><span class="n">03</span><div><h3>Choose your commencement date</h3><p>If it is the right fit, you choose when your 60 days begin. Nothing is purchased online.</p></div></div>
+      </div>
+      <div class="cta-row">
+        <button class="btn" type="button" data-go="1">Start application</button>
+        <p class="micro">Heal starts with an in-person session in Melbourne, and Misha runs these personally.</p>
+      </div>
+    </section>
+
+    <!-- ============ questions ============ -->
+    <form id="form" novalidate>
+
+      <!-- Q1 -->
+      <section class="screen" id="s-1" data-q="1">
+        <div class="qmeta"><span class="qcount">Question 1 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">First, what should I call you?</h2>
+        <label for="f-name" class="qhelp">Your first name is enough.</label>
+        <input type="text" id="f-name" name="first_name" autocomplete="given-name" required>
+        <p class="err">Please add your first name.</p>
+      </section>
+
+      <!-- Q2 -->
+      <section class="screen" id="s-2" data-q="2">
+        <div class="qmeta"><span class="qcount">Question 2 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">What is your email?</h2>
+        <label for="f-email" class="qhelp">Where I will reply to your application.</label>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
+        <p class="err">Please add a valid email address.</p>
+      </section>
+
+      <!-- Q3 -->
+      <section class="screen" id="s-3" data-q="3">
+        <div class="qmeta"><span class="qcount">Question 3 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">And your mobile number?</h2>
+        <label for="f-phone" class="qhelp">So I can send your call details and a reminder. That is it.</label>
+        <input type="tel" id="f-phone" name="mobile" autocomplete="tel" required>
+        <p class="err">Please add a contact number.</p>
+      </section>
+
+      <!-- Q4 safety -->
+      <section class="screen" id="s-4" data-q="4">
+        <div class="qmeta"><span class="qcount">Question 4 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">Before we go further.</h2>
+        <p class="qnote">Heal is a personal growth and self-reflection practice. It is not therapy, medical care or psychological treatment.</p>
+        <p class="qhelp">Which is closest for you right now?</p>
+        <div class="opts" data-name="safety" data-multi="false">
+          <label class="opt"><input type="radio" name="safety" value="stable"><span class="mark"></span><span class="tx">I am stable and looking to do deeper personal growth work.</span></label>
+          <label class="opt"><input type="radio" name="safety" value="crisis"><span class="mark"></span><span class="tx">I am currently in crisis, acute distress, or need medical or mental health support right now.</span></label>
+          <label class="opt"><input type="radio" name="safety" value="unsure"><span class="mark"></span><span class="tx">I am not sure.</span></label>
+        </div>
+        <p class="err">Please choose the one closest to where you are.</p>
+      </section>
+
+      <!-- Q5 -->
+      <section class="screen" id="s-5" data-q="5">
+        <div class="qmeta"><span class="qcount">Question 5 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">In a sentence or two, what is the one pattern you keep coming back to?</h2>
+        <label for="f-pattern" class="qhelp">The thing that is still here, even after the work you have done. If naming it is hard, write what made you look into Heal instead.</label>
+        <textarea id="f-pattern" name="pattern" required></textarea>
+        <p class="err">A few honest lines are enough.</p>
+      </section>
+
+      <!-- Q6 -->
+      <section class="screen" id="s-6" data-q="6">
+        <div class="qmeta"><span class="qcount">Question 6 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">What have you already tried to work with this?</h2>
+        <p class="qhelp">Choose as many as apply.</p>
+        <div class="opts" data-name="tried" data-multi="true">
+          <label class="opt"><input type="checkbox" name="tried" value="Therapy or counselling"><span class="mark sq"></span><span class="tx">Therapy or counselling</span></label>
+          <label class="opt"><input type="checkbox" name="tried" value="Coaching"><span class="mark sq"></span><span class="tx">Coaching</span></label>
+          <label class="opt"><input type="checkbox" name="tried" value="Kinesiology"><span class="mark sq"></span><span class="tx">Kinesiology</span></label>
+          <label class="opt"><input type="checkbox" name="tried" value="Meditation, breathwork or similar"><span class="mark sq"></span><span class="tx">Meditation, breathwork or similar</span></label>
+          <label class="opt"><input type="checkbox" name="tried" value="Retreats, ceremonies or plant medicine"><span class="mark sq"></span><span class="tx">Retreats, ceremonies or plant medicine</span></label>
+          <label class="opt"><input type="checkbox" name="tried" value="Courses, books or self-guided work"><span class="mark sq"></span><span class="tx">Courses, books or self-guided work</span></label>
+          <label class="opt"><input type="checkbox" name="tried" value="Something else"><span class="mark sq"></span><span class="tx">Something else</span></label>
+        </div>
+        <p class="err">Please choose at least one.</p>
+      </section>
+
+      <!-- Q7 -->
+      <section class="screen" id="s-7" data-q="7">
+        <div class="qmeta"><span class="qcount">Question 7 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">Roughly how much time, energy or money have you put into this pattern?</h2>
+        <label for="f-spend" class="qhelp">Optional. A rough sense is useful for our call, and you can skip it.</label>
+        <textarea id="f-spend" name="spend"></textarea>
+      </section>
+
+      <!-- Q8 -->
+      <section class="screen" id="s-8" data-q="8">
+        <div class="qmeta"><span class="qcount">Question 8 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">Which feels most true?</h2>
+        <div class="opts" data-name="profile" data-multi="false">
+          <label class="opt"><input type="radio" name="profile" value="I understand it, but it has not actually shifted"><span class="mark"></span><span class="tx">I understand it, but it has not actually shifted</span></label>
+          <label class="opt"><input type="radio" name="profile" value="Every time I get close, it seems to become something else"><span class="mark"></span><span class="tx">Every time I get close, it seems to become something else</span></label>
+          <label class="opt"><input type="radio" name="profile" value="I know what to do, but something in me will not let me"><span class="mark"></span><span class="tx">I know what to do, but something in me will not let me</span></label>
+          <label class="opt"><input type="radio" name="profile" value="It shifts with a practitioner, then fades when I leave"><span class="mark"></span><span class="tx">It shifts with a practitioner, then fades when I leave</span></label>
+        </div>
+        <p class="err">Please choose the one closest to true.</p>
+      </section>
+
+      <!-- Q9 -->
+      <section class="screen" id="s-9" data-q="9">
+        <div class="qmeta"><span class="qcount">Question 9 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">If this pattern softened its grip, what would actually change?</h2>
+        <label for="f-change" class="qhelp">Be specific. Not just "I would feel better". What would actually be different?</label>
+        <textarea id="f-change" name="change" required></textarea>
+        <p class="err">Tell me what would actually be different.</p>
+      </section>
+
+      <!-- Q10 -->
+      <section class="screen" id="s-10" data-q="10">
+        <div class="qmeta"><span class="qcount">Question 10 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">Heal begins with one in-person session in Melbourne. Can you attend within the next three weeks?</h2>
+        <div class="opts" data-name="melbourne" data-multi="false">
+          <label class="opt"><input type="radio" name="melbourne" value="Yes, I am in Melbourne and can make that work"><span class="mark"></span><span class="tx">Yes, I am in Melbourne and can make that work</span></label>
+          <label class="opt"><input type="radio" name="melbourne" value="I am near Melbourne and could travel in"><span class="mark"></span><span class="tx">I am near Melbourne and could travel in</span></label>
+          <label class="opt"><input type="radio" name="melbourne" value="No, not right now"><span class="mark"></span><span class="tx">No, not right now</span></label>
+        </div>
+        <p class="err">Please choose one.</p>
+      </section>
+
+      <!-- Q11 -->
+      <section class="screen" id="s-11" data-q="11">
+        <div class="qmeta"><span class="qcount">Question 11 of 11</span><span class="bar"><i></i></span></div>
+        <h2 class="qtitle">Heal is $1,790. Is that an investment you are in a position to make if it is the right fit?</h2>
+        <div class="opts" data-name="investment" data-multi="false">
+          <label class="opt"><input type="radio" name="investment" value="Yes, if it is the right fit"><span class="mark"></span><span class="tx">Yes, if it is the right fit</span></label>
+          <label class="opt"><input type="radio" name="investment" value="Probably, but I want to understand it properly first"><span class="mark"></span><span class="tx">Probably, but I want to understand it properly first</span></label>
+          <label class="opt"><input type="radio" name="investment" value="Not right now"><span class="mark"></span><span class="tx">Not right now</span></label>
+        </div>
+        <p class="err">Please choose one.</p>
+      </section>
+
+      <!-- review / send -->
+      <section class="screen" id="s-send">
+        <h2 class="qtitle" id="sendhead">That is everything.</h2>
+        <p class="qhelp">Come with one pattern. We will do more with one thing than ten.</p>
+        <div class="cta-row" style="text-align:left">
+          <button class="btn" type="submit" id="submitbtn">Send my application</button>
+          <p class="micro" style="margin-left:0;text-align:left">Read personally by Misha. Nothing is purchased online.</p>
+          <p class="err" id="senderr">That did not send. Opening your email app instead so nothing is lost.</p>
+        </div>
+      </section>
+
+      <div class="nav" id="nav" style="display:none">
+        <button class="btn ghost" type="button" id="backbtn">Back</button>
+        <button class="btn" type="button" id="nextbtn">Continue</button>
+      </div>
+    </form>
+
+    <!-- ============ safety exit ============ -->
+    <section class="screen" id="s-exit">
+      <h2 class="exit-h">Thank you for your honesty. It matters.</h2>
+      <p class="exit-p">Based on what you have shared, Heal is not the right fit for where you are right now, and I would not feel right taking you through it. That is not a judgement. It is about making sure you get support that actually fits.</p>
+      <span class="lifeline"><b>If you need support now</b>Please reach out to a qualified professional, your GP, or <b style="display:inline;letter-spacing:0;text-transform:none;font-size:15px;color:var(--charcoal-900)">Lifeline on 13 11 14</b>. If life is in danger, call 000.</span>
+      <p class="exit-p" style="margin-top:22px">The door to Heal stays open for a time when it is the right fit. Look after yourself.</p>
+      <p class="micro" style="margin-left:0;text-align:left">Nothing you entered has been sent or stored.</p>
+    </section>
+
+    <!-- ============ done ============ -->
+    <section class="screen" id="s-done">
+      <h2 class="exit-h" id="donehead">Thank you.</h2>
+      <p class="exit-p" id="donebody"></p>
+      <p class="exit-p" style="font-family:var(--font-serif);font-style:italic;font-size:19px;color:var(--charcoal-500);margin-top:26px">"Your body already knows. I teach you how to ask."</p>
+    </section>
+
   </div>
-  <p class="quote">"Your body already knows. I teach you how to ask."</p>
+
+  <p class="quote" id="closequote">"Your body already knows. I teach you how to ask."</p>
+  <p class="disclaimer">Heal is a personal growth and self-reflection practice. It does not diagnose, assess or treat medical or psychological conditions, and is not a replacement for medical, psychological or professional support.</p>
   <a class="back" href="index.html">Return to Heal</a>
 </div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ------------------------------------------------------------------
+     WHERE APPLICATIONS GO
+     Paste the Google Apps Script web-app URL between the quotes.
+     While it is empty the form still works: it falls back to opening
+     Misha's email client with the whole application pre-filled, so an
+     application is never lost.
+  ------------------------------------------------------------------ */
+  var ENDPOINT = "";
+  var FALLBACK_EMAIL = "misha@healmethod.com.au";
+  var STORE = "heal-application-v1";
+
+  var LAST = 11;
+  var form     = document.getElementById("form");
+  var nav      = document.getElementById("nav");
+  var nextBtn  = document.getElementById("nextbtn");
+  var backBtn  = document.getElementById("backbtn");
+  var submitBtn= document.getElementById("submitbtn");
+  var sendErr  = document.getElementById("senderr");
+  var current  = 0;           // 0 = intro, 1..11 = questions, 12 = send
+  var sending  = false;
+
+  /* ---------- capture quiz tags from the URL, if any ---------- */
+  var params = new URLSearchParams(location.search);
+  var hidden = {};
+  ["quiz_result_type","quiz_secondary_result_type","block_category","qualification_tag","utm_source","utm_medium","utm_campaign"]
+    .forEach(function(k){ if (params.get(k)) hidden[k] = params.get(k); });
+
+  /* ---------- option rows behave like buttons ---------- */
+  document.querySelectorAll(".opts").forEach(function(group){
+    var multi = group.dataset.multi === "true";
+    group.addEventListener("change", function(){
+      group.querySelectorAll(".opt").forEach(function(o){
+        o.classList.toggle("sel", o.querySelector("input").checked);
+      });
+      clearError(group.closest(".screen"));
+      // a single-select answer advances on its own, which keeps the flow quick
+      if (!multi && !group.closest("#s-4")) setTimeout(function(){ go(current + 1); }, 260);
+      if (!multi && group.closest("#s-4")) setTimeout(handleSafety, 260);
+    });
+  });
+
+  /* ---------- navigation ---------- */
+  function screenEl(n){
+    if (n === 0) return document.getElementById("s-intro");
+    if (n > LAST) return document.getElementById("s-send");
+    return document.getElementById("s-" + n);
+  }
+
+  function show(el){
+    document.querySelectorAll(".screen").forEach(function(s){ s.classList.remove("on"); });
+    el.classList.add("on");
+  }
+
+  function go(n){
+    if (n < 1) n = 1;
+    if (n > LAST + 1) n = LAST + 1;
+    current = n;
+    show(screenEl(n));
+    nav.style.display = (n >= 1 && n <= LAST) ? "flex" : "none";
+    backBtn.style.visibility = (n === 1) ? "hidden" : "visible";
+    nextBtn.textContent = (n === LAST) ? "Review" : "Continue";
+    var pct = Math.round((n / LAST) * 100);
+    document.querySelectorAll(".bar i").forEach(function(b){ b.style.width = pct + "%"; });
+    var first = screenEl(n).querySelector("input[type=text],input[type=email],input[type=tel],textarea");
+    if (first) setTimeout(function(){ first.focus(); }, 60);
+    save();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  document.querySelectorAll("[data-go]").forEach(function(b){
+    b.addEventListener("click", function(){ go(parseInt(b.dataset.go, 10)); });
+  });
+  nextBtn.addEventListener("click", function(){ if (validate(current)) go(current + 1); });
+  backBtn.addEventListener("click", function(){ go(current - 1); });
+
+  /* Enter advances on single-line inputs */
+  form.addEventListener("keydown", function(e){
+    if (e.key === "Enter" && e.target.tagName === "INPUT"){
+      e.preventDefault();
+      if (validate(current)) go(current + 1);
+    }
+  });
+
+  /* ---------- validation ---------- */
+  function errEl(screen){ return screen.querySelector(".err"); }
+  function clearError(screen){ var e = errEl(screen); if (e) e.classList.remove("on"); }
+  function showError(screen){ var e = errEl(screen); if (e) e.classList.add("on"); }
+
+  function validate(n){
+    var screen = screenEl(n);
+    if (!screen || n > LAST) return true;
+    var field = screen.querySelector("input[type=text],input[type=email],input[type=tel],textarea");
+    if (field){
+      if (!field.hasAttribute("required")) return true;
+      var v = field.value.trim();
+      if (!v){ showError(screen); field.focus(); return false; }
+      if (field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){ showError(screen); field.focus(); return false; }
+      clearError(screen); return true;
+    }
+    var group = screen.querySelector(".opts");
+    if (group){
+      var any = group.querySelector("input:checked");
+      if (!any){ showError(screen); return false; }
+      clearError(screen); return true;
+    }
+    return true;
+  }
+
+  form.querySelectorAll("input,textarea").forEach(function(f){
+    f.addEventListener("input", function(){ clearError(f.closest(".screen")); save(); });
+  });
+
+  /* ---------- the safety gate ---------- */
+  function handleSafety(){
+    var picked = form.querySelector("input[name=safety]:checked");
+    if (!picked) return;
+    if (picked.value === "crisis"){
+      // Stop here. Nothing is transmitted or stored: they have disclosed
+      // being in crisis, they are not proceeding, and there is no reason
+      // to hold that against their name.
+      try { localStorage.removeItem(STORE); } catch(e){}
+      nav.style.display = "none";
+      document.getElementById("pagetitle").innerHTML = "Thank you for <em>telling me.</em>";
+      document.getElementById("pagelede").style.display = "none";
+      document.getElementById("closequote").style.display = "none";
+      show(document.getElementById("s-exit"));
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    go(5);
+  }
+
+  /* ---------- tags, per Deliverable 04 v1.6 qualification logic ---------- */
+  function tags(d){
+    var t = [];
+    if (d.safety === "unsure") t.push("HEAL-SAFETY-REVIEW");
+    if (d.melbourne === "No, not right now") t.push("HEAL-APP-GEO-DECLINE");
+    if (d.investment === "Not right now") t.push("HEAL-APP-PRICE-NOTNOW");
+    if (!t.length) t.push("HEAL-APP-QUALIFIED");
+    else if (t.length === 1 && t[0] === "HEAL-SAFETY-REVIEW") t.push("HEAL-APP-REVIEW");
+    return t.join(" ");
+  }
+
+  function collect(){
+    var d = {};
+    ["first_name","email","mobile","pattern","spend","change"].forEach(function(k){
+      var el = form.querySelector("[name=" + k + "]");
+      d[k] = el ? el.value.trim() : "";
+    });
+    ["safety","profile","melbourne","investment"].forEach(function(k){
+      var el = form.querySelector("input[name=" + k + "]:checked");
+      d[k] = el ? el.value : "";
+    });
+    d.tried = Array.prototype.map.call(
+      form.querySelectorAll("input[name=tried]:checked"), function(i){ return i.value; }
+    ).join(", ");
+    d.tags = tags(d);
+    d.submitted_at = new Date().toISOString();
+    d.page = location.href;
+    Object.keys(hidden).forEach(function(k){ d[k] = hidden[k]; });
+    return d;
+  }
+
+  /* ---------- save + restore, so a refresh does not cost them the form ---------- */
+  function save(){
+    try {
+      var d = collect(); d.step = current;
+      localStorage.setItem(STORE, JSON.stringify(d));
+    } catch(e){}
+  }
+  function restore(){
+    try {
+      var raw = localStorage.getItem(STORE); if (!raw) return;
+      var d = JSON.parse(raw);
+      ["first_name","email","mobile","pattern","spend","change"].forEach(function(k){
+        var el = form.querySelector("[name=" + k + "]"); if (el && d[k]) el.value = d[k];
+      });
+      ["profile","melbourne","investment"].forEach(function(k){
+        if (!d[k]) return;
+        var el = form.querySelector("input[name=" + k + "][value=\"" + d[k].replace(/"/g,'\\"') + "\"]");
+        if (el){ el.checked = true; el.closest(".opt").classList.add("sel"); }
+      });
+      if (d.tried) d.tried.split(", ").forEach(function(v){
+        var el = form.querySelector("input[name=tried][value=\"" + v.replace(/"/g,'\\"') + "\"]");
+        if (el){ el.checked = true; el.closest(".opt").classList.add("sel"); }
+      });
+      // deliberately do not restore the safety answer, and never resume past it
+      if (d.step && d.step > 4) go(Math.min(d.step, LAST + 1));
+    } catch(e){}
+  }
+
+  /* ---------- mailto fallback, so an application is never lost ---------- */
+  function mailtoFallback(d){
+    var body = [
+      "Name: " + d.first_name,
+      "Email: " + d.email,
+      "Mobile: " + d.mobile,
+      "",
+      "The pattern: " + d.pattern,
+      "",
+      "Already tried: " + d.tried,
+      "Time / energy / money: " + (d.spend || "not answered"),
+      "Most true: " + d.profile,
+      "",
+      "If it softened: " + d.change,
+      "",
+      "Melbourne within 3 weeks: " + d.melbourne,
+      "Investment: " + d.investment,
+      "Safety: " + d.safety,
+      "Tags: " + d.tags
+    ].join("\n");
+    location.href = "mailto:" + FALLBACK_EMAIL
+      + "?subject=" + encodeURIComponent("Heal application: " + d.first_name)
+      + "&body=" + encodeURIComponent(body);
+  }
+
+  function finish(d){
+    try { localStorage.removeItem(STORE); } catch(e){}
+    var declined = d.tags.indexOf("GEO-DECLINE") > -1 || d.tags.indexOf("PRICE-NOTNOW") > -1;
+    document.getElementById("donehead").textContent = "Thank you, " + (d.first_name || "and welcome") + ".";
+    document.getElementById("donebody").innerHTML = declined
+      ? "Your application is in and I read every one personally. I will be in touch by email."
+      : "Your application is in. I read every one personally and will be in touch by email to arrange your <b>free 30-minute Introduction Call</b>.";
+    document.getElementById("closequote").style.display = "none";
+    nav.style.display = "none";
+    show(document.getElementById("s-done"));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /* ---------- submit ---------- */
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (sending) return;
+    for (var i = 1; i <= LAST; i++){ if (!validate(i)){ go(i); return; } }
+    var d = collect();
+
+    if (!ENDPOINT){ mailtoFallback(d); finish(d); return; }
+
+    sending = true;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spin"></span>Sending';
+    sendErr.classList.remove("on");
+
+    fetch(ENDPOINT, {
+      method: "POST",
+      // text/plain avoids a CORS preflight, which Apps Script does not answer
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(d)
+    })
+    .then(function(r){ if (!r.ok) throw new Error("bad status " + r.status); return r.text(); })
+    .then(function(){ finish(d); })
+    .catch(function(){
+      sending = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send my application";
+      sendErr.classList.add("on");
+      setTimeout(function(){ mailtoFallback(d); }, 900);
+    });
+  });
+
+  restore();
+})();
+</script>
 </body>
 </html>
